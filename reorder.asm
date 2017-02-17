@@ -8,7 +8,7 @@ INCLUDE Irvine32.inc
 
 .data          ; beginning of data segment
 
-;----clears all registers----;
+ ;----clears all registers----;
   clear_eax TEXTEQU <sub eax, eax>                      ;mov eax, 0    ; macros 
   clear_ebx TEXTEQU <sub ebx, ebx>                      ;mov ebx, 0    
   clear_ecx TEXTEQU <sub ecx, ecx>                      ;mov ecx, 0 
@@ -24,14 +24,14 @@ clear_ecx
 
 mov eax, [ArrayD]      ; beginning of the array , moves the first element of the array into eax
 mov ebx, [ArrayD + 4]  ; moves the second element into ebx
-mov ecx, [ArrayD + 8] ; moves the last element ino ecx
+mov ecx, [ArrayD + 8]  ; moves the last element ino ecx
 
 XCHG eax, ecx ; exchanges register, exchange ecx with eax
 XCHG ebx, ecx ; exchange ecx with ebx 
 
-mov [ArrayD], eax     ; beginning of the array , moves the first element of the array into eax
+mov [ArrayD], eax      ; beginning of the array , moves the first element of the array into eax
 mov [ArrayD + 4], ebx  ; moves the second element into ebx
-mov [ArrayD + 8], ecx ; moves the last element ino ecx
+mov [ArrayD + 8], ecx  ; moves the last element into ecx
 
 
 call DumpRegs  ; clears the register 
