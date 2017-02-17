@@ -24,7 +24,7 @@ clear_ecx
 
 mov eax, [ArrayD]      ; beginning of the array , moves the first element of the array into eax
 mov ebx, [ArrayD + 4]  ; moves the second element into ebx
-mov ecx, [ArrayD + 8]  ; moves the last element ino ecx
+mov ecx, [ArrayD + 8]  ; moves the last element into ecx
 
 XCHG eax, ecx ; exchanges register, exchange ecx with eax
 XCHG ebx, ecx ; exchange ecx with ebx 
